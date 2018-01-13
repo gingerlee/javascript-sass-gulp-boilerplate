@@ -84,14 +84,14 @@ gulp.task('build', ['clean'], function(){
 gulp.task('serve', ['build'], function() {
   browserSync.init({
     server: {
-      baseDir: "./",
+      baseDir: "./dist/",
       index: "index.html"
     }
   });
 
   gulp.watch(['src/js/*.js'], ['jsBuild']);
   gulp.watch(['bower.json'], ['bowerBuild']);
-  gulp.watch(['*.html'], ['htmlBuild']);
+  gulp.watch(['src/*.html'], ['htmlBuild']);
   gulp.watch('src/scss/*.scss', ['cssBuild']);
 });
 
@@ -104,6 +104,8 @@ gulp.task('bowerBuild', ['bower'], function(){
 });
 
 gulp.task('htmlBuild', ['bower'], function(){
+  return gulp.src(['src/*.html'])
+  .pipe(gulp.dest('./dist'));
   browserSync.reload();
 });
 

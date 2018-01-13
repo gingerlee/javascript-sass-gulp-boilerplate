@@ -10,7 +10,7 @@
 
 ## Installation
 
-1. _`$ git clone` [https://github.com/gingerlee/super-galactic.git](https://github.com/gingerlee/super-galactic.git)_
+1. _`$ git clone` [https://github.com/gingerlee/[project-name].git](https://github.com/gingerlee/[project-name].git)_
 
 2. _`$ cd {repo name}`_
 
